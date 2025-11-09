@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>M2 IGAST</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Florian Bayer" />
+    <script src="assets/header-attrs-2.28/header-attrs.js"></script>
+    <link rel="stylesheet" href="assets/css/theme_flo.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/mtheme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/fonts_mtheme.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="assets/css/tools.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+
+
+
+
+
+class: center, middle, inverse, title-slide, animated, fadeIn
+# Cartographie M2 IGAST 2024-2025
+# TD Sémiologie graphique et discrétisation&lt;br /&gt; &lt;br /&gt;
+### Florian Bayer
+
+&lt;div class="my-footer"&gt;&lt;span&gt;ENSG - M2 IGAST 2024-2025 : cartographie - Florian Bayer&lt;/span&gt;&lt;/div&gt; 
+
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# TD 1 la sémiologie graphique
+
+&lt;div class="my-footer-title "&gt;&lt;/div&gt; 
+
+---
+class: animated, fadeIn
+## Objectifs du TD 1
+
+- Comprendre les différents types de données : quantitatives (stock, taux), qualitatives (nominales, ordinales).
+- Apprendre à choisir les variables visuelles adaptées : couleur, taille, valeur, forme, texture, orientation, grain.
+- Mettre en pratique les principes de la sémiologie graphique pour créer des cartes thématiques efficaces et informatives.
+- Mettre en page une carte.
+
+&lt;div class="my-footer"&gt;&lt;span&gt;ENSG - M2 IGAST 2024-2025 : cartographie - Florian Bayer&lt;/span&gt;&lt;/div&gt; 
+
+---
+class: animated, fadeIn
+## Données du TD
+
+Pour ce TD, nous utiliserons un jeu de données départemental 2024 de l'IGN :
+
+Superficie en hectares :
+- du département (*Surface*)
+- sans couvert forestier (*sans couvert*)
+- des forêts (*Surface foret*) dont : feuillus (*feuillus*), conifères (*conifères*) et mixte (*mixte*)
+
+Pourcentage : 
+- de feuillus (*p_feuillus*)
+- de conifères (*p_conifere*)
+  
+Le fichier geojson contenant les données est disponible ici : 
+
+[DEP_FORET_3857.geojson](https://github.com/fbxyz/ENSG_IGAST/blob/master/data/DEP_FORET_3857.geojson )
+
+
+---
+class: animated, fadeIn
+## Consigne
+
+Dans le cadre d'un groupe de travail du ministère rassemblant des professionnels des métiers de la forêt, vous êtes chargé de produire une carte.
+
+Cette carte illustrera la répartition des forêts et des feuillus dans le rapport. Elle sera imprimée dans un rapport sur l'état des forêts en France métropolitaine. 
+
+- Elle devra montrer à la fois **la surface des forêts** dans chaque département et la **part des feuillus**. 
+- Vous pouvez utiliser les outils que vous préférez pour produire vos cartes (Magrit, Qgis, autre).
+- Soignez la mise en page et justifiez vos choix de variables visuelles.
+- Pour la discrétisation, vous utiliserez la méthode de Jenks en 5 classes en attendant le cours sur la discrétisation.
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# TD 2 la discrétisation
+
+&lt;div class="my-footer-title "&gt;&lt;/div&gt; 
+
+---
+class: animated, fadeIn
+## Discrétisation : le choix cornélien !
+
+Objectif : comprendre l’impact des différentes méthodes de discrétisation sur la représentation cartographique et le message transmis.
+
+Toujours dans le cadre du groupe de travail, vous devez comparer la part des conifères et des feuillus dans les forêts françaises.
+
+Pour cela, on vous demande de produire **deux cartes choroplèthes** avec les données du TD précédent.
+
+Vous allez être répartis dans 4 groupes différents, chaque groupe devant produire les cartes avec une méthode unique attribuée au hasard : 
+
+- quantiles
+- Q6
+- amplitudes égales
+- seuils naturels (Jenks).
+
+&lt;div class="my-footer"&gt;&lt;span&gt;ENSG - M2 IGAST 2024-2025 : cartographie - Florian Bayer&lt;/span&gt;&lt;/div&gt; 
+
+---
+class: animated, fadeIn
+## Rendu
+
+Chaque groupe devra :
+
+- Analyser la distribution statistique des données (histogramme, valeurs centrales, paramètres de dispersion)
+- Présenter les avantages et les inconvénients de la méthode de discrétisation qui vous a été attribuée
+- Argumenter en faveur de votre méthode de discrétisation en vous appuyant sur des arguments scientifiques
+- Illustrer votre propos en utilisant les cartes correspondantes
+
+&lt;div class="my-footer"&gt;&lt;span&gt;ENSG - M2 IGAST 2024-2025 : cartographie - Florian Bayer&lt;/span&gt;&lt;/div&gt; 
+
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="assets/libs/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

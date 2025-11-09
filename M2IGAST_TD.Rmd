@@ -1,0 +1,146 @@
+---
+title: "M2 IGAST"
+author: "Florian Bayer"
+output:
+  xaringan::moon_reader:
+    lib_dir: assets
+    chakra: assets/libs/remark-latest.min.js
+    css: [
+    "./assets/css/theme_flo.css",
+    "./assets/css/mtheme.css",
+    "./assets/css/fonts_mtheme.css",
+    "./assets/css/animate.css",
+    "./assets/css/tools.css",
+    "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"]
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+    seal: false
+
+---
+```{r setup, global_options,include=FALSE}
+knitr::opts_chunk$set(
+  dpi = 200,
+  strip.white = T,
+  message = FALSE,
+  comment = NA,
+  echo = FALSE,
+  warning = FALSE,
+  eval = TRUE
+  
+)
+```
+
+```{r include=FALSE}
+source('./assets/functions.R')
+
+requiredPackages = c('knitr','png','grid','gridExtra',"dotenv")
+
+PackageFacile(requiredPackages)
+
+load_dot_env(".env")
+annee = Sys.getenv("annee")
+
+```
+
+
+
+class: center, middle, inverse, title-slide, animated, fadeIn
+# Cartographie M2 IGAST `r annee`
+# TD Sémiologie graphique et discrétisation<br /> <br />
+### Florian Bayer
+
+<div class="my-footer"><span>ENSG - M2 IGAST `r annee` : cartographie - Florian Bayer</span></div> 
+
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# TD 1 la sémiologie graphique
+
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn
+## Objectifs du TD 1
+
+- Comprendre les différents types de données : quantitatives (stock, taux), qualitatives (nominales, ordinales).
+- Apprendre à choisir les variables visuelles adaptées : couleur, taille, valeur, forme, texture, orientation, grain.
+- Mettre en pratique les principes de la sémiologie graphique pour créer des cartes thématiques efficaces et informatives.
+- Mettre en page une carte.
+
+<div class="my-footer"><span>ENSG - M2 IGAST `r annee` : cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Données du TD
+
+Pour ce TD, nous utiliserons un jeu de données départemental 2024 de l'IGN :
+
+Superficie en hectares :
+- du département (*Surface*)
+- sans couvert forestier (*sans couvert*)
+- des forêts (*Surface foret*) dont : feuillus (*feuillus*), conifères (*conifères*) et mixte (*mixte*)
+
+Pourcentage : 
+- de feuillus (*p_feuillus*)
+- de conifères (*p_conifere*)
+  
+Le fichier geojson contenant les données est disponible ici : 
+
+[DEP_FORET_3857.geojson](https://github.com/fbxyz/ENSG_IGAST/blob/master/data/DEP_FORET_3857.geojson )
+
+
+---
+class: animated, fadeIn
+## Consigne
+
+Dans le cadre d'un groupe de travail du ministère rassemblant des professionnels des métiers de la forêt, vous êtes chargé de produire une carte.
+
+Cette carte illustrera la répartition des forêts et des feuillus dans le rapport. Elle sera imprimée dans un rapport sur l'état des forêts en France métropolitaine. 
+
+- Elle devra montrer à la fois **la surface des forêts** dans chaque département et la **part des feuillus**. 
+- Vous pouvez utiliser les outils que vous préférez pour produire vos cartes (Magrit, Qgis, autre).
+- Soignez la mise en page et justifiez vos choix de variables visuelles.
+- Pour la discrétisation, vous utiliserez la méthode de Jenks en 5 classes en attendant le cours sur la discrétisation.
+
+---
+class: inverse, center, middle, animated, fadeIn  
+# TD 2 la discrétisation
+
+<div class="my-footer-title "></div> 
+
+---
+class: animated, fadeIn
+## Discrétisation : le choix cornélien !
+
+Objectif : comprendre l’impact des différentes méthodes de discrétisation sur la représentation cartographique et le message transmis.
+
+Toujours dans le cadre du groupe de travail, vous devez comparer la part des conifères et des feuillus dans les forêts françaises.
+
+Pour cela, on vous demande de produire **deux cartes choroplèthes** avec les données du TD précédent.
+
+Vous allez être répartis dans 4 groupes différents, chaque groupe devant produire les cartes avec une méthode unique attribuée au hasard : 
+
+- quantiles
+- Q6
+- amplitudes égales
+- seuils naturels (Jenks).
+
+<div class="my-footer"><span>ENSG - M2 IGAST `r annee` : cartographie - Florian Bayer</span></div> 
+
+---
+class: animated, fadeIn
+## Rendu
+
+Chaque groupe devra :
+
+- Analyser la distribution statistique des données (histogramme, valeurs centrales, paramètres de dispersion)
+- Présenter les avantages et les inconvénients de la méthode de discrétisation qui vous a été attribuée
+- Argumenter en faveur de votre méthode de discrétisation en vous appuyant sur des arguments scientifiques
+- Illustrer votre propos en utilisant les cartes correspondantes
+
+<div class="my-footer"><span>ENSG - M2 IGAST `r annee` : cartographie - Florian Bayer</span></div> 
+
+
+
