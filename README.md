@@ -28,33 +28,28 @@ Objectifs spécifiques pour la section MAUP:
 ## Supports de cours
 
 ### MAUP (3 heures)
-Ce cours et TD est à ouvrir avec Jupyter Lab (cf. infra)
-- [RMD](https://github.com/fbxyz/ENSG_IGAST/blob/master/M2IGAST_MAUP.Rmd)
-- [HTML](https://raw.githack.com/fbxyz/ENSG_IGAST/refs/heads/master/M2IGAST_MAUP.html)
+
+- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_MAUP_Cours.html)
+- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_MAUP.pdf)
+- Le TD est à ouvrir avec Jupyter Lab (cf. infra)
+  - [ipynb](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD.ipynb)
 
 ### Sémiologie et mise en page (3 heures)
-- [HTML](https://raw.githack.com/fbxyz/ENSG_IGAST/refs/heads/master/M2IGAST_Carto.html)
-- [PDF](https://raw.githack.com/fbxyz/ENSG_IGAST/master/pdf/M2_IGAST_cours_carto.pdf)
+- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_Carto.html)
+- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_carto.pdf)
 
 ### La discrétisation (3 heures)
-- [HTML](https://raw.githack.com/fbxyz/ENSG_IGAST/master/M2IGAST_discretisation.slides.html)
-- [PDF](https://raw.githack.com/fbxyz/ENSG_IGAST/master/pdf/M2_IGAST_cours_discretisation.pdf)
-
-
-## Travaux Dirigés (TD)
-- [HTML](https://raw.githack.com/fbxyz/ENSG_IGAST/master/M2IGAST_TD.html)
-- [PDF](https://raw.githack.com/fbxyz/ENSG_IGAST/master/pdf/M2_IGAST_TD.pdf)
-
-### TD MAUP (Python/Jupyter)
-- `M2IGAST_MAUP_TD.ipynb` : notebook d'exercices
-- `M2IGAST_MAUP_TD_CORRECTION.ipynb` : notebook avec corrections complètes (mis en ligne après le cours)
+- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_discretisation.slides.html)
+- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_discretisation.pdf)
+- Travaux Dirigés (TD)
+  - [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_TD.pdf)
 
 ### Données
 Les données du TD MAUP sont chargées automatiquement depuis GitHub.
 
 Autres données à télécharger (download raw file) :
-  - [DEP_FORET_3857.geojson](https://github.com/fbxyz/ENSG_IGAST/blob/master/data/DEP_FORET_3857.geojson)
-  - [UE_GEN3_3857.geojson](https://github.com/fbxyz/ENSG_IGAST/blob/master/data/UE_GEN3_3857.geojson)
+  - [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson)
+  - [UE_GEN3_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/UE_GEN3_3857.geojson)
 
 ## Installation et utilisation de JupyterLab
 
