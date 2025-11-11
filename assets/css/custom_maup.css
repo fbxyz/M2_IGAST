@@ -1,0 +1,15 @@
+/* Import du thème de base geodata */
+@import url('https://raw.githack.com/fbxyz/respysive-slide/master/assets/css/geodata.css');
+
+/* Style personnalisé pour mettre tous les textes en gras en orange */
+strong {
+    color: #e1812c !important;
+}
+
+/* S'assurer que cela s'applique aussi dans les listes, paragraphes, etc. */
+p strong,
+li strong,
+div strong,
+span strong {
+    color: #e1812c !important;
+}
