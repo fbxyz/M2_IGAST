@@ -30,7 +30,7 @@ Le message d'une carte, les types de données, les variables visuelles et la mis
 
 ### 2. La discrétisation, découper une série en classes (3 h)
 
-Décrire une distribution, les méthodes (quantiles, Q6, amplitudes égales, moyenne et écart-type, Jenks), le nombre de classes et la comparaison de cartes.
+Décrire une distribution, les méthodes automatiques (quantiles, Q6, amplitudes égales, moyenne et écart-type, Jenks) et les seuils thématiques, le nombre de classes, les arrondis et la comparaison de cartes.
 
 - Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Discretisation_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_discretisation.pdf)
 - TD, le choix des classes (feuillus et conifères en France) : consignes à la fin du cours, mêmes données que le TD 1
@@ -40,7 +40,7 @@ Décrire une distribution, les méthodes (quantiles, Q6, amplitudes égales, moy
 Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee.
 
 - Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
-- TD, l'artificialisation des sols à cinq mailles : [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb), à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
+- TD, la consommation d'espaces à cinq mailles (cartes à bornes communes, distributions, corrélation) : [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb), à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
 
 ## Données
 

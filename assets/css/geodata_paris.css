@@ -101,7 +101,7 @@ body.reveal-viewport::after {
 .reveal .rs-body ul li::marker { font-size: 0.75em; }
 
 /* Texte justifié par défaut, sur toute la largeur de sa colonne */
-.reveal .rs-body p, .reveal .rs-body li { text-align: justify; hyphens: none; }
+.reveal .rs-body p, .reveal .rs-body li { text-align: left; hyphens: none; }
 
 /* Listes dans les cartes : respysive en fait un list-group Bootstrap (éléments séparés par un filet).
    Il fixe 70 % en ligne sur la liste et sur chaque élément : on garde la taille du texte de la carte. */
