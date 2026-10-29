@@ -1,0 +1,151 @@
+/* Thème GeoData Paris : palette du logo (marine, orange et dégradé des lignes) */
+@import url('https://raw.githack.com/fbxyz/respysive-slide/master/assets/css/geodata.css');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  --marine: #2b398c;
+  --marine-fonce: #1f2a6b;
+  --orange: #e1812c;
+  --texte: #44464f;
+  --teinte: #f3f4fa;
+  --filet: #dfe2f0;
+  --degrade: linear-gradient(90deg, #f9b273, #e89043, #dc741a, #ab5842, #7c415d, #543b7c, #2b398c);
+  --r-main-font: "Source Sans 3", Helvetica, sans-serif;
+  --r-heading-font: Montserrat, Helvetica, sans-serif;
+  --r-main-color: var(--texte);
+  --r-heading-color: var(--marine);
+  --r-heading-text-transform: none;
+  --r-heading-font-weight: 700;
+  --r-heading-letter-spacing: -0.015em;
+}
+
+/* Titres de diapositive : pictogramme orange, filet en dégradé */
+.reveal .rs-body > .row:first-child h3 {
+  font-size: 1.25em;
+  padding-bottom: 14px;
+  margin-bottom: 22px;
+  background: var(--degrade) bottom left / 100% 3px no-repeat;
+}
+.reveal h3 i { color: var(--orange); margin-right: 14px; font-size: 0.8em; vertical-align: 2px; }
+
+.reveal strong { color: var(--orange) !important; font-weight: 700; }
+.reveal em { color: var(--marine); }
+.reveal ul li::marker, .reveal ol li::marker { color: var(--orange); font-weight: 700; }
+
+/* Cartes de texte */
+.reveal .card {
+  background: var(--teinte);
+  border: none !important;
+  border-radius: 14px;
+  box-shadow: none;
+}
+.reveal .card-body { padding: 26px 26px 22px !important; }
+.reveal .card-title, .reveal .card-title p {
+  font-family: Montserrat, Helvetica, sans-serif;
+  text-transform: none;
+  color: var(--marine);
+  font-size: 1.1em;
+  text-align: left !important;
+  margin-bottom: 10px;
+}
+.reveal .card-title::after {
+  content: ""; display: block; width: 36px; height: 4px; border-radius: 2px;
+  background: var(--orange); margin-top: 8px;
+}
+.reveal .card-text { color: var(--texte) !important; }
+
+/* Tableaux */
+.reveal table th {
+  font-family: Montserrat, Helvetica, sans-serif; font-weight: 600;
+  color: var(--marine); border-bottom: 2px solid var(--marine);
+}
+.reveal table td { border-bottom: 1px solid var(--filet); }
+
+/* Marges de page */
+.reveal .slides section.rs-slide { --rs-slide-padding: 34px 64px 54px; }
+
+/* Pages de chapitre : toute la page en marine (fenêtre entière à l'écran), panneau blanc arrondi pour les lignes du logo */
+.reveal .slides section.rs-slide:has(.title-page .col-md-6) { background: var(--marine); }
+body.reveal-viewport:has(.slides section.rs-slide.present .title-page .col-md-6) { background: var(--marine); }
+.reveal .title-page .col-md-6:first-child { padding-left: 10px !important; }
+.reveal .title-page .col-md-6:first-child h2 { font-size: 2em !important; font-weight: 800; margin-bottom: 18px; }
+.reveal .title-page .col-md-6:first-child h3 { color: #fff; text-transform: none; font-weight: 500; font-size: 1.05em !important; }
+.reveal .title-page .col-md-6:last-child { border-radius: 24px; padding: 34px !important; }
+
+/* Page de titre */
+.reveal .title-page h3, .reveal .title-page h4 { text-transform: none; }
+.reveal .title-page h4 { color: var(--texte); font-weight: 600; }
+
+/* Bande en dégradé en bas de la fenêtre (à l'écran) ou de chaque page (en PDF) */
+body.reveal-viewport::after {
+  content: ""; position: fixed; left: 0; right: 0; bottom: 0; height: 7px; background: var(--degrade); z-index: 10;
+}
+.rs-print body.reveal-viewport::after { display: none; }
+.rs-print .reveal .slides section.rs-slide::after {
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 7px; background: var(--degrade);
+}
+.reveal .progress { top: 0; bottom: auto; }
+
+/* Logo en pied de page */
+.reveal .slides section.rs-slide:not(.center)::before {
+  content: ""; position: absolute; right: 64px; bottom: 16px; width: 120px; height: 28px;
+  background: url("https://raw.githubusercontent.com/fbxyz/pratik/refs/heads/main/geodata.svg") right center / contain no-repeat;
+  opacity: 0.9;
+}
+.reveal .progress span { background: var(--degrade); }
+
+/* Listes à puces : même corps que le texte courant, un peu plus petit, puces discrètes */
+.reveal .rs-body ul, .reveal .rs-body ol { font-size: 0.95em; line-height: 1.4; }
+.reveal .rs-body li { margin: 0.3em 0; }
+.reveal .rs-body ul li::marker { font-size: 0.75em; }
+
+/* Texte justifié par défaut, sur toute la largeur de sa colonne */
+.reveal .rs-body p, .reveal .rs-body li { text-align: justify; hyphens: none; }
+
+/* Listes dans les cartes : respysive en fait un list-group Bootstrap (éléments séparés par un filet).
+   Il fixe 70 % en ligne sur la liste et sur chaque élément : on garde la taille du texte de la carte. */
+.reveal .card-text ul.list-group { font-size: 1em !important; margin: 0; padding: 0; max-width: none; display: flex; }
+.reveal .card-text li.list-group-item {
+  font-size: 1em !important; color: var(--texte); background: transparent;
+  padding: 0.55em 0 !important; border-color: var(--filet);
+}
+.reveal .card-text li.list-group-item:first-child { padding-top: 0.1em !important; }
+.reveal .rs-body .row + .row .card { margin-top: 18px; }
+
+/* Titres de chapitre : pas de coupure au milieu d'un mot */
+.reveal .title-page h2, .reveal .title-page h3 { overflow-wrap: normal; word-wrap: normal; hyphens: none; }
+.reveal .title-page .col-md-6:first-child h2 { font-size: 1.4em !important; }
+
+/* Cartes horizontales : titre à gauche, liste à droite */
+.reveal .card.carte-ligne { margin-bottom: 12px; }
+.reveal .rs-body .row + .row .card.carte-ligne { margin-top: 0; }
+.reveal .card.carte-ligne .card-body {
+  display: grid; grid-template-columns: 24% 1fr; column-gap: 28px; align-items: center;
+  padding: 12px 26px !important;
+}
+.reveal .card.carte-ligne .card-title { margin: 0; font-size: 0.68em !important; }
+.reveal .card.carte-ligne li.list-group-item { padding: 0.35em 0 !important; }
+.reveal .rs-body .row:has(> div > .carte-ligne) { margin-bottom: 12px; }
+
+/* Chiffres sous une carte (moyenne, écart-type, maximum) */
+.reveal .chiffres { font-size: 0.42em; margin: 6px 4px 0; color: var(--texte); }
+.reveal .chiffres > div {
+  display: flex; justify-content: space-between; padding: 3px 0; border-top: 1px solid var(--filet);
+}
+.reveal .chiffres > div:first-child { border-top: none; }
+.reveal .chiffres b { color: var(--marine); }
+
+/* Formule mise en avant */
+.reveal .formule {
+  background: var(--teinte); border-left: 6px solid var(--orange); border-radius: 8px;
+  padding: 14px 20px; margin: 0 0 18px; font-weight: 600; color: var(--marine);
+}
+
+/* Annonce du contenu sur les pages de chapitre */
+.reveal .title-page h4:has(.annonce) { margin-top: 28px; }
+.reveal .annonce {
+  display: block; margin: 0; padding-left: 1.1em; font-size: 0.62em; font-weight: 400;
+  color: #ffffff; text-transform: none; line-height: 1.5;
+}
+.reveal .annonce li { text-align: left; margin: 0.25em 0; }
+.reveal .annonce li::marker { color: var(--orange); }

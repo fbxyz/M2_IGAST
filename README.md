@@ -5,51 +5,35 @@
 
 ## Introduction
 
-Ce cours est destiné aux étudiants du M2 IGAST. 
-
-Il a pour objectif de leur fournir des rappels en cartographie, sémiologie graphique, discrétisation et MAUP
+Ce cours est destiné aux étudiants du M2 IGAST (ENSG). Il couvre la sémiologie graphique, la mise en page, la discrétisation et le MAUP (Modifiable Areal Unit Problem). Chaque séance associe un cours et un TD.
 
 ## Objectifs du cours
 
-A la fin de ce cours, vous serez capables de :
- - Comprendre les principes fondamentaux de la cartographie et de la sémiologie graphique.
- - Identifier les différents types de données et leurs propriétés. 
- - Choisir les variables visuelles adaptées aux types de données et à l'objectif de la carte. 
- - Appliquer les règles de la sémiologie graphique pour créer des cartes thématiques efficaces et lisibles.
- - Être conscients de la subjectivité inhérente à la cartographie et s'efforcer de produire des cartes objectives. 
- - Comprendre l'impact des différentes méthodes de discrétisation sur la représentation cartographique. 
- - Choisir la méthode de discrétisation la plus appropriée. 
- - Justifier vos choix de discrétisation en vous appuyant sur des arguments scientifiques.
-
-Objectifs spécifiques pour la section MAUP:
-- Comprendre le concept du MAUP (Modifiable Areal Unit Problem) et ses implications sur l'analyse spatiale.
-- Apprendre des stratégies pour minimiser les effets du MAUP et produire des analyses plus robustes.
+À la fin de ce cours, vous serez capables de :
+- comprendre les principes de la cartographie et de la sémiologie graphique ;
+- identifier les types de données et choisir les variables visuelles adaptées ;
+- mettre en page une carte thématique lisible ;
+- décrire la distribution d'une série avant de la discrétiser ;
+- choisir une méthode de discrétisation et justifier ce choix ;
+- comprendre les effets d'échelle et de zonage (MAUP) sur les cartes et les statistiques.
 
 ## Supports de cours
 
-### MAUP (3 heures)
+| Séance | Cours | TD |
+|:--|:--|:--|
+| Sémiologie et mise en page (3 h) | [HTML](https://raw.githack.com/fbxyz/M2_IGAST/master/M2IGAST_Carto_Cours.html), [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_carto.pdf) | Carte de la forêt, présenté à la fin du cours |
+| La discrétisation (3 h) | [HTML](https://raw.githack.com/fbxyz/M2_IGAST/master/M2IGAST_Discretisation_Cours.html), [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_discretisation.pdf) | Choix des classes, présenté à la fin du cours |
+| Le MAUP (3 h) | [HTML](https://raw.githack.com/fbxyz/M2_IGAST/master/M2IGAST_MAUP_Cours.html), [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_MAUP.pdf) | Artificialisation des sols à cinq mailles, [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb) ou [Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb) |
 
-- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_MAUP_Cours.html)
-- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_MAUP.pdf)
-- Le TD est à ouvrir avec Jupyter Lab (cf. infra)
-  - [ipynb](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD.ipynb)
+Les cours HTML se parcourent avec les flèches du clavier. La touche `S` affiche les notes de l'enseignant.
 
-### Sémiologie et mise en page (3 heures)
-- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_Carto.html)
-- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_carto.pdf)
+## Données
 
-### La discrétisation (3 heures)
-- [HTML](https://raw.githack.com/fbxyz/M2_IGAST/refs/heads/master/M2IGAST_discretisation.slides.html)
-- [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_cours_discretisation.pdf)
-- Travaux Dirigés (TD)
-  - [PDF](https://raw.githack.com/fbxyz/M2_IGAST/master/pdf/M2_IGAST_TD.pdf)
+Les données du TD MAUP (consommation d'espaces 2011-2025 du Cerema, populations 2011 et 2022 de l'Insee) sont chargées depuis GitHub par le notebook, aux mailles communes, EPCI, départements, anciennes et nouvelles régions.
 
-### Données
-Les données du TD MAUP sont chargées automatiquement depuis GitHub.
-
-Autres données à télécharger (download raw file) :
-  - [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson)
-  - [UE_GEN3_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/UE_GEN3_3857.geojson)
+Données des TD de sémiologie et de discrétisation, à télécharger (bouton *Download raw file*) :
+- [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson), part de forêt, de feuillus et de conifères par département (IGN)
+- [UE_GEN3_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/UE_GEN3_3857.geojson), fond de carte européen généralisé
 
 ## Installation et utilisation de JupyterLab
 
@@ -97,10 +81,10 @@ Vous devriez voir `(env_maup)` apparaître au début de la ligne de commande.
 Dans **Anaconda Prompt** avec l'environnement activé, installer les packages :
 
 ```bash
-conda install -c conda-forge jupyterlab geopandas pandas matplotlib seaborn mapclassify numpy
+conda install -c conda-forge jupyterlab geopandas pandas matplotlib seaborn mapclassify numpy scipy libpysal esda
 ```
 
-Répondre `y` (yes) quand demandé. L'installation peut prendre quelques minutes.
+Répondre `y` (yes) quand demandé. L'installation peut prendre quelques minutes. `scipy`, `libpysal` et `esda` ne servent qu'aux pistes « Pour aller plus loin » du TD MAUP.
 
 > **Note** : Conda gère automatiquement les dépendances système (GDAL, GEOS, PROJ) nécessaires pour GeoPandas, ce qui évite les problèmes d'installation courants sous Windows.
 
@@ -139,7 +123,8 @@ Conseils :
 1. Chargement et structure des données à différentes échelles
 2. Cartographie des données avec geopandas et mapclassify
 3. Analyse univariée avec seaborn
-4. Synthèse et conclusions sur le MAUP
+4. Corrélation entre consommation d'espaces et croissance de la population
+5. Synthèse et conclusions sur le MAUP
 
 ### Problèmes courants
 
@@ -155,5 +140,3 @@ Conseils :
 - Matplotlib : https://matplotlib.org/
 - Seaborn : https://seaborn.pydata.org/
 - Mapclassify : https://pysal.org/mapclassify/
-
-
