@@ -3,155 +3,110 @@
   <img src="https://raw.githubusercontent.com/fbxyz/pratik/refs/heads/main/geodata.svg" alt="Logo Géodata Paris" width="260"/>
 </p>
 
-## Introduction
+## Trois séances, du découpage du territoire à la carte
 
-Ce cours est destiné aux étudiants du M2 IGAST (Géodata Paris). Il couvre le MAUP (Modifiable Areal Unit Problem), la sémiologie graphique, la mise en page et la discrétisation. Chaque séance associe un cours et un TD.
+Ce cours s'adresse aux étudiants du M2 IGAST (Géodata Paris). Il commence par le MAUP (*Modifiable Areal Unit Problem*), puis traite de la sémiologie graphique et de la mise en page, avant la discrétisation. Chaque séance associe un cours et un TD.
 
-## Objectifs du cours
-
-À la fin de ce cours, vous serez capables de :
-- comprendre les effets d'échelle et de zonage (MAUP) sur les cartes et les statistiques ;
-- comprendre les principes de la cartographie et de la sémiologie graphique ;
-- identifier les types de données et choisir les variables visuelles adaptées ;
-- mettre en page une carte thématique lisible ;
-- décrire la distribution d'une série avant de la discrétiser ;
-- choisir une méthode de discrétisation et justifier ce choix.
+À la fin du cours, les étudiants savent mesurer l'effet d'un changement de maille ou de découpage sur une carte, une statistique ou une corrélation. Ils identifient le type d'une donnée (qualitative ou quantitative, stock ou taux) pour choisir la variable visuelle qui la traduit, puis mettent en page une carte lisible sans son auteur. Enfin, ils décrivent la distribution d'une série avant de la découper en classes et justifient le choix de la méthode.
 
 ## Supports de cours
 
 Les cours HTML se parcourent avec les flèches du clavier. La touche `S` affiche les notes de l'enseignant.
 
-### 1. Le MAUP, Modifiable Areal Unit Problem (3 h)
+### 1. Le MAUP, quand le découpage change le résultat (3 h)
 
-Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee.
+Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee à Perpignan et à Paris.
 
-- Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
-- TD, la consommation d'espaces à cinq mailles (cartes à bornes communes, distributions, corrélation) : [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb), à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
+- Cours en [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html) et en [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
+- TD sur la consommation d'espaces à cinq mailles, dans un [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb) à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
 
-### 2. Sémiologie graphique, traduire des données en carte (3 h)
+### 2. La sémiologie graphique, traduire des données en carte (3 h)
 
 Le message d'une carte, les types de données, les variables visuelles et la mise en page.
 
-- Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Carto_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_carto.pdf)
-- TD, une carte de la forêt : consignes à la fin du cours, données [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson)
+- Cours en [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Carto_Cours.html) et en [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_carto.pdf)
+- TD sur la forêt en France, consignes à la fin du cours
 
-### 3. La discrétisation, découper une série en classes (3 h)
+### 3. La discrétisation, découper une série en classes (6 h)
 
-Décrire une distribution, les méthodes automatiques (quantiles, Q6, amplitudes égales, moyenne et écart-type, Jenks) et les seuils thématiques, le nombre de classes, les arrondis et la comparaison de cartes.
+La description d'une distribution, les méthodes automatiques (quantiles, Q6, amplitudes égales, moyenne et écart-type, seuils naturels de Jenks), les seuils thématiques, le nombre de classes, les limites arrondies et la comparaison de deux cartes.
 
-- Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Discretisation_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_discretisation.pdf)
-- TD, le choix des classes (feuillus et conifères en France) : consignes à la fin du cours, mêmes données que le TD de sémiologie
+- Cours en [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Discretisation_Cours.html) et en [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_discretisation.pdf)
+- TD sur les feuillus et les conifères, consignes à la fin du cours, avec les données du TD de sémiologie
 
 ## Données
 
-Les données du TD MAUP (consommation d'espaces 2011-2025 du Cerema, populations 2011 et 2022 de l'Insee) sont chargées depuis GitHub par le notebook, aux mailles communes, EPCI, départements, anciennes et nouvelles régions.
+Le notebook du TD MAUP charge lui-même ses données depuis GitHub. Il s'agit de la consommation d'espaces naturels, agricoles et forestiers de 2011 à 2025 (Cerema) et des populations de 2011 et de 2022 (Insee), aux mailles communes, EPCI, départements, anciennes et nouvelles régions.
 
-Données des TD de sémiologie et de discrétisation, à télécharger (bouton *Download raw file*) :
+Les TD de sémiologie et de discrétisation utilisent deux fichiers, à télécharger avec le bouton *Download raw file* de GitHub.
+
 - [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson), part de forêt, de feuillus et de conifères par département (IGN)
 - [UE_GEN3_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/UE_GEN3_3857.geojson), fond de carte européen généralisé
 
 ## Installation et utilisation de JupyterLab
 
-### Étape 1 : Vérifier si Anaconda est installé
+Les commandes ci-dessous sont données pour Windows. Elles s'exécutent toutes dans *Anaconda Prompt*, pas dans PowerShell ni dans CMD.
 
-**Windows** :
-1. Chercher "Anaconda Prompt" dans le menu démarrer
-2. **Si "Anaconda Prompt" apparaît** : Anaconda est installé → passer à l'**Étape 2**
-3. **Si "Anaconda Prompt" n'existe pas** : Installer Anaconda (voir ci-dessous)
+### Étape 1. Installer Anaconda
 
-**Installer Anaconda (Windows)** :
-1. Télécharger Anaconda : https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe
-2. Lancer l'installateur et suivre les instructions
-3. Une fois l'installation terminée, chercher "Anaconda Prompt" dans le menu démarrer pour vérifier que l'installation a réussi
+Si *Anaconda Prompt* apparaît dans le menu Démarrer, Anaconda est déjà installé et l'étape 2 peut commencer.
 
+Sinon, il faut [télécharger Anaconda](https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe) (version 2026.07 pour Windows), lancer l'installateur et suivre les instructions. Une fois l'installation terminée, *Anaconda Prompt* doit apparaître dans le menu Démarrer.
 
-### Étape 2 : Ouvrir Anaconda Prompt
+### Étape 2. Créer un environnement conda
 
-**Windows** :
-- Chercher "Anaconda Prompt" dans le menu démarrer et l'ouvrir
-- **Important** : Toutes les commandes suivantes doivent être exécutées dans **Anaconda Prompt** (pas PowerShell ou CMD)
-
-
-### Étape 3 : Créer un environnement conda
-
-Dans **Anaconda Prompt**, créer un environnement isolé pour ce cours :
+Dans *Anaconda Prompt*, la commande suivante crée un environnement isolé pour ce cours. Il faut répondre `y` quand conda le demande.
 
 ```bash
 conda create -n env_maup python=3.11
 ```
 
-Répondre `y` (yes) quand demandé.
-
-Activer l'environnement :
+L'environnement s'active ensuite avec la commande suivante. `(env_maup)` apparaît alors au début de la ligne de commande.
 
 ```bash
 conda activate env_maup
 ```
 
-Vous devriez voir `(env_maup)` apparaître au début de la ligne de commande.
+### Étape 3. Installer les packages
 
-
-### Étape 4 : Installer les packages nécessaires
-
-Dans **Anaconda Prompt** avec l'environnement activé, installer les packages :
+Toujours dans l'environnement activé, l'installation prend quelques minutes. Conda gère lui-même les bibliothèques système de GeoPandas (GDAL, GEOS, PROJ), ce qui évite la plupart des erreurs d'installation sous Windows.
 
 ```bash
 conda install -c conda-forge jupyterlab geopandas pandas matplotlib seaborn mapclassify numpy scipy libpysal esda
 ```
 
-Répondre `y` (yes) quand demandé. L'installation peut prendre quelques minutes. `scipy`, `libpysal` et `esda` ne servent qu'aux pistes « Pour aller plus loin » du TD MAUP.
+`scipy`, `libpysal` et `esda` ne servent qu'aux pistes « Pour aller plus loin » du TD MAUP.
 
-> **Note** : Conda gère automatiquement les dépendances système (GDAL, GEOS, PROJ) nécessaires pour GeoPandas, ce qui évite les problèmes d'installation courants sous Windows.
+### Étape 4. Lancer JupyterLab
 
-### Étape 5 : Lancement de JupyterLab
+Il faut d'abord se placer dans le dossier du cours, par exemple `C:\Users\VotreNom\Documents\M2_IGAST`, puis lancer JupyterLab. Le navigateur s'ouvre sur l'interface.
 
-Dans **Anaconda Prompt** avec l'environnement activé, naviguer vers le dossier du cours :
-
-**Windows** :
 ```bash
-cd C:\chemin\vers\M2_IGAST
-```
-
-Exemple : `cd C:\Users\VotreNom\Documents\M2_IGAST`
-
-Lancer JupyterLab :
-```bash
+cd C:\Users\VotreNom\Documents\M2_IGAST
 jupyter lab
 ```
 
-Le navigateur s'ouvre automatiquement avec l'interface JupyterLab.
-
 ### Utilisation
 
-Exécution des cellules :
-- `Shift + Entrée` : exécuter et passer à la cellule suivante
-- `Ctrl + Entrée` : exécuter et rester sur la cellule
-- Bouton Play dans la barre d'outils
+Une cellule s'exécute avec `Maj + Entrée` (puis passage à la cellule suivante), avec `Ctrl + Entrée` (sans changer de cellule) ou avec le bouton Play de la barre d'outils. Les cellules s'exécutent dans l'ordre. En cas de problème, le menu `Kernel`, puis `Restart Kernel...`, redémarre le noyau. `Ctrl + S` enregistre le notebook.
 
-Conseils :
-- Exécuter les cellules dans l'ordre
-- Redémarrer le kernel en cas de problème : Menu `Kernel` → `Restart Kernel...`
-- Sauvegarder régulièrement : `Ctrl + S` ou `Cmd + S`
+### Le TD MAUP en quatre parties
 
-### Structure du TD MAUP
-
-1. Chargement et structure des données à différentes échelles
-2. Cartographie des données avec geopandas et mapclassify
-3. Analyse univariée avec seaborn
+1. Chargement et contrôle des données aux cinq mailles
+2. Cartographie du même taux, avec les mêmes bornes à chaque maille
+3. Analyse univariée (tableau comparatif et boxplots)
 4. Corrélation entre consommation d'espaces et croissance de la population
-5. Synthèse et conclusions sur le MAUP
+
+Une courte tâche individuelle termine le TD.
 
 ### Problèmes courants
 
-**ModuleNotFoundError** : installer le package manquant avec `pip install nom_package`
-
-**Kernel died** : redémarrer le kernel et réexécuter les cellules depuis le début
-
-**Cartes non affichées** : vérifier que toutes les cellules précédentes ont été exécutées
+Une erreur `ModuleNotFoundError` signale un package manquant. Il s'installe avec `conda install -c conda-forge nom_du_package`, dans l'environnement activé. Après un message *Kernel died*, il faut redémarrer le noyau puis réexécuter les cellules depuis le début. Une carte qui ne s'affiche pas vient le plus souvent d'une cellule précédente non exécutée.
 
 ### Documentation
-- GeoPandas : https://geopandas.org/
-- Pandas : https://pandas.pydata.org/docs/
-- Matplotlib : https://matplotlib.org/
-- Seaborn : https://seaborn.pydata.org/
-- Mapclassify : https://pysal.org/mapclassify/
+
+- [GeoPandas](https://geopandas.org/)
+- [Pandas](https://pandas.pydata.org/docs/)
+- [Matplotlib](https://matplotlib.org/)
+- [Seaborn](https://seaborn.pydata.org/)
+- [Mapclassify](https://pysal.org/mapclassify/)
