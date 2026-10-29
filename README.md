@@ -5,42 +5,42 @@
 
 ## Introduction
 
-Ce cours est destiné aux étudiants du M2 IGAST (Géodata Paris). Il couvre la sémiologie graphique, la mise en page, la discrétisation et le MAUP (Modifiable Areal Unit Problem). Chaque séance associe un cours et un TD.
+Ce cours est destiné aux étudiants du M2 IGAST (Géodata Paris). Il couvre le MAUP (Modifiable Areal Unit Problem), la sémiologie graphique, la mise en page et la discrétisation. Chaque séance associe un cours et un TD.
 
 ## Objectifs du cours
 
 À la fin de ce cours, vous serez capables de :
+- comprendre les effets d'échelle et de zonage (MAUP) sur les cartes et les statistiques ;
 - comprendre les principes de la cartographie et de la sémiologie graphique ;
 - identifier les types de données et choisir les variables visuelles adaptées ;
 - mettre en page une carte thématique lisible ;
 - décrire la distribution d'une série avant de la discrétiser ;
-- choisir une méthode de discrétisation et justifier ce choix ;
-- comprendre les effets d'échelle et de zonage (MAUP) sur les cartes et les statistiques.
+- choisir une méthode de discrétisation et justifier ce choix.
 
 ## Supports de cours
 
 Les cours HTML se parcourent avec les flèches du clavier. La touche `S` affiche les notes de l'enseignant.
 
-### 1. Sémiologie graphique, traduire des données en carte (3 h)
+### 1. Le MAUP, Modifiable Areal Unit Problem (3 h)
+
+Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee.
+
+- Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
+- TD, la consommation d'espaces à cinq mailles (cartes à bornes communes, distributions, corrélation) : [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb), à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
+
+### 2. Sémiologie graphique, traduire des données en carte (3 h)
 
 Le message d'une carte, les types de données, les variables visuelles et la mise en page.
 
 - Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Carto_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_carto.pdf)
 - TD, une carte de la forêt : consignes à la fin du cours, données [DEP_FORET_3857.geojson](https://github.com/fbxyz/M2_IGAST/blob/master/data/DEP_FORET_3857.geojson)
 
-### 2. La discrétisation, découper une série en classes (3 h)
+### 3. La discrétisation, découper une série en classes (3 h)
 
 Décrire une distribution, les méthodes automatiques (quantiles, Q6, amplitudes égales, moyenne et écart-type, Jenks) et les seuils thématiques, le nombre de classes, les arrondis et la comparaison de cartes.
 
 - Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_Discretisation_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_discretisation.pdf)
-- TD, le choix des classes (feuillus et conifères en France) : consignes à la fin du cours, mêmes données que le TD 1
-
-### 3. Le MAUP, Modifiable Areal Unit Problem (3 h)
-
-Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee.
-
-- Cours : [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html), [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
-- TD, la consommation d'espaces à cinq mailles (cartes à bornes communes, distributions, corrélation) : [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb), à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
+- TD, le choix des classes (feuillus et conifères en France) : consignes à la fin du cours, mêmes données que le TD de sémiologie
 
 ## Données
 
@@ -60,7 +60,7 @@ Données des TD de sémiologie et de discrétisation, à télécharger (bouton *
 3. **Si "Anaconda Prompt" n'existe pas** : Installer Anaconda (voir ci-dessous)
 
 **Installer Anaconda (Windows)** :
-1. Télécharger Anaconda : https://repo.anaconda.com/archive/Anaconda3-2025.06-0-Windows-x86_64.exe
+1. Télécharger Anaconda : https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Windows-x86_64.exe
 2. Lancer l'installateur et suivre les instructions
 3. Une fois l'installation terminée, chercher "Anaconda Prompt" dans le menu démarrer pour vérifier que l'installation a réussi
 
