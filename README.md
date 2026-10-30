@@ -18,7 +18,7 @@ Les cours HTML se parcourent avec les flèches du clavier. La touche `S` affiche
 Les effets d'échelle et de zonage sur les cartes, les statistiques et les corrélations, illustrés avec les carreaux Filosofi de l'Insee à Perpignan et à Paris.
 
 - Cours en [HTML](https://fbxyz.github.io/M2_IGAST/M2IGAST_MAUP_Cours.html) et en [PDF](https://fbxyz.github.io/M2_IGAST/pdf/M2_IGAST_cours_MAUP.pdf)
-- TD sur la consommation d'espaces à cinq mailles, dans un [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb) à ouvrir dans JupyterLab (voir plus bas) ou dans [Google Colab](https://colab.research.google.com/github/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb)
+- TD sur la consommation d'espaces à cinq mailles, dans un [notebook](https://github.com/fbxyz/M2_IGAST/blob/master/M2IGAST_MAUP_TD_artif.ipynb) à ouvrir dans JupyterLab (voir plus bas)
 
 ### 2. La sémiologie graphique, traduire des données en carte (3 h)
 
