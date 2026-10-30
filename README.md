@@ -7,11 +7,11 @@
 
 Ce cours s'adresse aux étudiants du M2 IGAST (Géodata Paris). Il commence par le MAUP (*Modifiable Areal Unit Problem*), puis traite de la sémiologie graphique et de la mise en page, avant la discrétisation. Chaque séance associe un cours et un TD.
 
-À la fin du cours, les étudiants savent mesurer l'effet d'un changement de maille ou de découpage sur une carte, une statistique ou une corrélation. Ils identifient le type d'une donnée (qualitative ou quantitative, stock ou taux) pour choisir la variable visuelle qui la traduit, puis mettent en page une carte lisible sans son auteur. Enfin, ils décrivent la distribution d'une série avant de la découper en classes et justifient le choix de la méthode.
+À la fin du cours, les étudiants savent mesurer l'effet d'un changement de maille ou de découpage sur une carte, une statistique ou une corrélation. Ils identifient le type d'une donnée (qualitative ou quantitative, stock ou taux) pour choisir la variable visuelle qui la traduit, puis mettent en page une carte lisible, avec titre, légende, échelle et source. Enfin, ils décrivent la distribution d'une série avant de la découper en classes et justifient le choix de la méthode.
 
 ## Supports de cours
 
-Les cours HTML se parcourent avec les flèches du clavier. La touche `S` affiche les notes de l'enseignant.
+Les cours HTML se parcourent avec les flèches du clavier.
 
 ### 1. Le MAUP, quand le découpage change le résultat (3 h)
 
